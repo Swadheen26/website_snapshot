@@ -61,3 +61,8 @@ if __name__ == "__main__":
         # Check if the URL is valid or not
         if not url.startswith("http://") and not url.startswith("https://"):
             url = "http://" + url  # Prepending "http://" if missing
+        
+        parsed_url = urlparse(url)
+
+        website_name = parsed_url.netloc.replace("www.", "")  # Remove "www." if present
+        folder_name = f"{website_name}_Screenshots" 

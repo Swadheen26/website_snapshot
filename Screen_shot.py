@@ -66,3 +66,23 @@ if __name__ == "__main__":
 
         website_name = parsed_url.netloc.replace("www.", "")  # Remove "www." if present
         folder_name = f"{website_name}_Screenshots" 
+
+
+        take_partial_screenshots(url, folder_name)
+
+        print(f"Screenshots for {url} saved successfully in folder: {folder_name}")
+
+
+        # Asking user for choice to continue or exit.
+        while True:
+            user_choice = input("\n1. Enter the URL of another website\n2. Exit the program\nEnter your choice (1/2): ")
+
+            if user_choice == '1':
+                break  # Break out of the inner loop to enter a new URL
+            elif user_choice == '2':
+                break  # Exit the outer loop and end the program
+            else:
+                print("Invalid choice. Please enter 1 or 2.")
+
+        if user_choice == '2':
+            break  # Exit the outer loop and end the program

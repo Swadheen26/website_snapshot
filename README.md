@@ -4,7 +4,7 @@ This tool allows you to capture screenshots of websites. It takes partial screen
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/website-screenshot-tool.git`
+1. Clone the repository: `https://github.com/Swadheen26/website_snapshot.git`
 2. Install the required dependencies.
 
 ## Usage

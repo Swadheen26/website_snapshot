@@ -54,3 +54,10 @@ def take_partial_screenshots(url, folder_name):
         # Quit the driver
         driver.quit()
 
+if __name__ == "__main__":
+    while True:
+        url = input("Enter the URL of the website: ").strip()
+
+        # Check if the URL is valid or not
+        if not url.startswith("http://") and not url.startswith("https://"):
+            url = "http://" + url  # Prepending "http://" if missing

@@ -65,7 +65,18 @@ if __name__ == "__main__":
         parsed_url = urlparse(url)
 
         website_name = parsed_url.netloc.replace("www.", "")  # Remove "www." if present
-        folder_name = f"{website_name}_Screenshots" 
+        folder_name = f"{website_name}_Screenshots"  
+
+
+        # Handling if folder already exists
+        if os.path.exists(folder_name):
+            folder_number = 1
+            while True:
+                new_folder_name = f"{folder_name}_{folder_number}"
+                if not os.path.exists(new_folder_name):
+                    folder_name = new_folder_name
+                    break
+                folder_number += 1  # increasing folder count if having same name
 
 
         take_partial_screenshots(url, folder_name)
